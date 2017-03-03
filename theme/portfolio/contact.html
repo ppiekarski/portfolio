@@ -1,0 +1,45 @@
+{% extends 'portfolio/index.html' %}
+
+{% block title %}
+Kontakt
+{% endblock %}
+
+{% block content %}
+ <div id="highlighted">
+      <div class="container">
+        <div class="row-fluid header">
+          <h2 class="page-title"><span>Kontakt</span> <small>Lubię wyzwania, więc jeśli chcesz mi je zapewnić, skontaktuj się ze mną!</small></h2>
+        </div>
+      </div>
+    </div> 
+        
+      
+    <div id="content">
+      <div class="container">
+        
+        <div class="row block">
+          <div class="span6">
+            <form id="contact-form" method="post" action="."> {% csrf_token %}
+            {% if form.errors %}<div class="alert alert-error">W formularzu wystąpiły błędy!</div>{% endif %}
+            {% if success %}<div class="alert alert-success">{{success}}</div>{% endif %}
+              {% if form.name.errors %}<p class="text-error">{% for error in form.name.errors %}{{error}} {% endfor %}</p>{% endif %}
+              <input id="id_name" name="name" type="text" class="span5" placeholder="Nazwa" value="{% if form.name.value %}{{form.name.value}}{% endif %}">            
+              {% if form.email.errors %}<p class="text-error">Wprowadź poprawny adres email.</p>{% endif %}
+              <input id="id_email" name="email" type="email" class="span5" placeholder="Email" value="{% if form.email.value %}{{form.email.value}}{% endif %}">
+              {% if form.message.errors %}<p class="text-error">{% for error in form.message.errors %}{{error}} {% endfor %}</p>{% endif %}
+              <textarea id="id_message" name="message" rows="15" class="span5" placeholder="Wiadomość">{% if form.message.value %}{{form.message.value}}{% endif %}</textarea>
+              <input type="submit" class="btn btn-primary" value="Wyślij wiadomość">
+            </form>
+          </div>
+          <div class="span6">
+            <h3 class="block-title sub-title"><span>Inne sposoby kontaktu</span></h3>
+            <p><abbr title="Email">Email</abbr>: przemyslawpiekarski@elodz.eu</p>
+            <p><abbr title="Address">Inne</abbr>: Facebook, Google+ w stopce :]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

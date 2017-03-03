@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>{% block title %}Przemysław Piekarski{% endblock %}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="">
+<meta name="author" content="Przemysław Piekarski">
+
+{% block firstcss %}{% endblock %}
+<!-- Bootstrap CSS -->
+<link href="/static/portfolio/css/bootstrap.css" rel="stylesheet">
+<link href="/static/portfolio/css/responsive.css" rel="stylesheet">
+
+<!-- animate.css CSS -->
+<link href="/static/portfolio/css/animate.css" rel="stylesheet">
+
+<!-- Flexslider -->
+<link href="/static/portfolio/css/flexslider.css" rel="stylesheet">
+
+<!-- Theme style -->
+<link href="/static/portfolio/css/theme-style.css" rel="stylesheet">
+
+<!-- Your custom override -->
+<link href="/static/portfolio/css/custom-style.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="/static/portfolio/js/html5.js"></script>
+    <![endif]-->
+
+<!-- Le fav and touch icons - @todo: fill with your icons or remove -->
+<link rel="shortcut icon" href="/static/portfolio/img/icons/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="/static/portfolio/img/icons/default.png">
+<link href='http://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>
+{% block lastcss %}{% endblock %}
+</head>
+
+<body class="has-navbar-fixed-top page-index">
+{% include 'portfolio/menu-top.html' %}
+{% block content %}
+<div id="highlighted">
+	
+  <div class="inner"> 
+    <section class="flexslider-wrapper container">
+      <div class="flexslider" data-slidernav="auto" data-transition="slide"> 
+        <!--The Slides-->
+        <div class="slides"> 
+          <!--Slide #3 & so on below-->
+          <div class="slide row-fluid">
+            <div class="span6"><img src="/static/portfolio/img/slides/slide.png" alt="Happy in all browsers" /></div>
+            <div class="span6 caption">
+              <h4 class="main-quote">“Ważne jest by nigdy nie przestać pytać. Ciekawość nie istnieje bez przyczyny. Wystarczy więc, jeśli spróbujemy zrozumieć choć trochę tej tajemnicy każdego dnia. Nigdy nie trać świętej ciekawości. Kto nie potrafi pytać nie potrafi żyć.”</h4>
+              <p><i>- Albert Einstein</i></p> </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<div id="content">
+  <div class="container"> 
+    <!-- Mission statement -->
+    <div class="row-fluid mission">
+      <div class="inner">
+        <h3>Witaj, jeśli szukasz <span>programisty</span> lub <span>webdevelopera</span>, to zapraszam do zapoznania się z moją ofertą!</h3>
+      </div>
+    </div>
+    
+  </div>
+</div>
+{% endblock %}
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="inner">
+    <div class="container">
+      <div class="row">
+        <div class="span6 col blog-list blog-list-short">
+          <h3>Linki:</h3>
+          <div class="media row">
+            <div class="media-body span6"> 
+              <h5 class="title media-heading"><a target="_blank" href="https://www.djangoproject.com/"> Django Framework</a></h5>
+            </div>
+          </div>
+          
+          <div class="media row">
+            <div class="media-body span6">
+              <h5 class="title media-heading"><a target="_blank" href="http://getbootstrap.com/">Bootstrap Framework</a></h5>
+            </div>
+          </div>
+          
+          <div class="media row">
+            <div class="media-body span6">
+              <h5 class="title media-heading"><a target="_blank" href="http://ellislab.com/codeigniter">CodeIgniter Framework</a></h5>
+            </div>
+          </div>
+        </div>
+        <div class="span4 col contact-block"> 
+          <!-- contact details-->
+          <h3>Skontaktuj się ze mną!</h3>
+          <address>
+          <p><abbr title="Email"><strong>Email</strong></abbr>: przemyslawpiekarski@elodz.eu</p>
+          <p>...lub przez formularz kontaktowy na stronie</p>
+          </address>
+        </div>
+        <div class="span2 col social-media"> 
+          <!-- social media details-->
+          <h3>Znajdź mnie na:</h3>
+          <a href="https://www.facebook.com/piekarskiprzemyslaw" target="_blank"><i class="icon-facebook"></i> Facebook</a> 
+          <a href="http://google.com/+przemyslawpiekarskip" target="_blank"><i class="icon-google-plus"></i> Google +</a>
+          <a href="https://github.com/ppiekarski" target="_blank"><i class="icon-github"></i> Github</a> 
+          <a href="http://pl.linkedin.com/pub/przemysław-piekarski/67/929/b57/" target="_blank"><i class="icon-linkedin"></i> Linkedin</a>
+        </div>
+      </div>
+      <div class="row"> 
+        <!-- copyright details-->
+        <div class="subfooter">
+          <div class="span12">
+            <p>Przemysław Piekarski | Copyright &copy; 2014</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!--Scripts -->
+<script src="/static/portfolio/js/jquery.js"></script> 
+
+<script src="/static/portfolio/js/bootstrap-transition.js"></script> 
+<script src="/static/portfolio/js/bootstrap-affix.js"></script> 
+<script src="/static/portfolio/js/bootstrap-alert.js"></script> 
+<script src="/static/portfolio/js/bootstrap-modal.js"></script> 
+<script src="/static/portfolio/js/bootstrap-dropdown.js"></script>
+<script src="/static/portfolio/js/bootstrap-tab.js"></script> 
+<script src="/static/portfolio/js/bootstrap-tooltip.js"></script> 
+<script src="/static/portfolio/js/bootstrap-popover.js"></script> 
+<script src="/static/portfolio/js/bootstrap-button.js"></script> 
+<script src="/static/portfolio/js/bootstrap-collapse.js"></script> 
+
+
+
+<!--Custom scripts mainly used to trigger libraries --> 
+<script src="/static/portfolio/js/script.js"></script>
+
+{% block scripts %}{% endblock %}
+</body>
+</html>
